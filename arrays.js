@@ -23,6 +23,26 @@ class MyArray {
     this.length--
     return lastItem
   }
+
+  // Delete item from index value of array
+  delete(index) {
+    const deletedItem = this.data[index]
+    this.shiftItems(index)
+    return deletedItem
+  }
+
+  // Shift items method
+  shiftItems(index) {
+    // loop from starting index to end of array
+    for (let i = index; i < this.length - 1; i++) {
+      // Move data from [i+1] value into [i]
+      this.data[i] = this.data[i+1]
+    }
+    // Delete last item
+    delete this.data[this.length-1]
+    // Subtract length of array by 1
+    this.length--
+  }
 }
 
 const newArray = new MyArray()
@@ -37,6 +57,8 @@ console.log(newArray)
 newArray.push('bonjour')
 console.log(newArray)
 console.log(newArray.get(4))
+console.log(newArray)
 newArray.pop()
-newArray.pop()
+console.log(newArray)
+console.log(newArray.delete(2))
 console.log(newArray)
