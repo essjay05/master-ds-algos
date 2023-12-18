@@ -4,19 +4,19 @@ class MyArray {
     this.data = {}
   }
 
-  // Retrieve item at array index provided
+  // Retrieve item at array index provided | Time complexity: O(1)
   get(index) {
     return this.data[index]
   }
 
-  // Add item value to end of array
+  // Add item value to end of array | Time complexity: O(1)
   push(item) {
     this.data[this.length] = item
     this.length++
     return this.length
   }
 
-  // Remove/delete item value from end of array
+  // Remove/delete item value from end of array | Time complexity: O(1)
   pop() {
     const lastItem = this.data[this.length-1]
     delete this.data[this.length-1]
@@ -24,14 +24,14 @@ class MyArray {
     return lastItem
   }
 
-  // Delete item from index value of array
+  // Delete item from index value of array | Time complexity: O(n) requires shiftItems (loop)
   delete(index) {
     const deletedItem = this.data[index]
     this.shiftItems(index)
     return deletedItem
   }
 
-  // Shift items method
+  // Shift items method | Time complexity: O(n) requires loop
   shiftItems(index) {
     // loop from starting index to end of array
     for (let i = index; i < this.length - 1; i++) {
