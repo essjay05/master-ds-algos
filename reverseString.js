@@ -3,8 +3,18 @@
 // 'ierdnA si eman yM iH'
 
 const reverseStr = (str) => {
-  const reversed = str.split('').reverse().join('')
+  // Solution 1:
+  // const reversed = str.split('').reverse().join('')
+  // return reversed
+
+  // Solution 2:
+  let reversed = []
+  for (let s of str) {
+    // console.log(s)
+    reversed = (s + reversed)
+  }
   return reversed
+
 }
 
 const string = 'asdf!'
