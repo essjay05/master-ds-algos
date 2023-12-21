@@ -1,5 +1,7 @@
-const arr1 = [0,3,4,31]
-const arr2 = [4,6,30]
+const arr1 = [4,8,31]
+const arr2 = [4,6,11,20,30]
+
+const findLesserVal = (val1, val2) => !val2 || val1 < val2 ? true : false
 
 const mergeSortedArrays = (array1, array2) => {
   // Create mergedArray
@@ -27,7 +29,17 @@ const mergeSortedArrays = (array1, array2) => {
   // console.log(Array.isArray(array2))
   
   // While Loop through both arrays and checking one number at a time
-  
+  while (array1Item || array2Item ) {
+    if (findLesserVal(array1Item, array2Item)) {
+      mergedArray.push(array1Item)
+      array1Item = array1[pointer1]
+      pointer1++
+    } else {
+      mergedArray.push(array2Item)
+      array2Item = array2[pointer2]
+      pointer2++
+    } 
+  }
 
   return mergedArray
 }
