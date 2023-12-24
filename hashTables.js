@@ -7,7 +7,6 @@ class HashTable {
     let hash = 0
     for (let i = 0; i < key.length; i++) {
       hash = (hash + key.charCodeAt(i) * i) % this.data.length
-      console.log(hash)
     }
 
     return hash
@@ -26,17 +25,25 @@ class HashTable {
     let address = this._hash(key)
     const currentBucket = this.data[address]
     console.log(currentBucket)
-    if (currentBucket.length) {
-
+    if (currentBucket) {
+      for(let i = 0; i < currentBucket.length; i++) {
+        if (currentBucket[i][0] === key) {
+          console.log(`(${currentBucket[i][0]}: ${currentBucket[i][1]})`)
+          return currentBucket[i][1]
+        }
+      }
     }
     return undefined
   }
+
+  keys() {
+
+  }
 }
 
-const myHashTable = new HashTable(2)
-// myHashTable._hash('1232')
+const myHashTable = new HashTable(50)
 myHashTable.set('grapess', 10000)
 myHashTable.set('apples', 35)
 myHashTable.set('oranges', 2)
 myHashTable.set('pears', 2)
-myHashTable.get('pears')
+myHashTable.get('apples')
