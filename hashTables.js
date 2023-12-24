@@ -25,11 +25,16 @@ class HashTable {
     let address = this._hash(key)
     const currentBucket = this.data[address]
     if (currentBucket) {
-      for(let i = 0; i < currentBucket.length; i++) {
-        if (currentBucket[i][0] === key) {
-          console.log(`(${currentBucket[i][0]}: ${currentBucket[i][1]})`)
-          return currentBucket[i][1]
-        }
+      // for(let i = 0; i < currentBucket.length; i++) {
+      //   if (currentBucket[i][0] === key) {
+      //     // console.log(`(${currentBucket[i][0]}: ${currentBucket[i][1]})`)
+      //     return currentBucket[i][1]
+      //   }
+      // }
+      
+      for (let c of currentBucket) {
+        console.log(c[1])
+        return c[1]
       }
     }
     return undefined
