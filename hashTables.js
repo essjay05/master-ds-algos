@@ -16,14 +16,27 @@ class HashTable {
   set(key, value) {
     let address = this._hash(key)
     if (!this.data[address]) {
-      this.data[address] = []
-      this.data[address].push([key, value])
-      console.log(this.data)
+      this.data[address] = []  
     }
+    this.data[address].push([key, value])
+    return this.data
+  }
 
+  get(key) {
+    let address = this._hash(key)
+    const currentBucket = this.data[address]
+    console.log(currentBucket)
+    if (currentBucket.length) {
+
+    }
+    return undefined
   }
 }
 
-const myHashTable = new HashTable(50)
+const myHashTable = new HashTable(2)
 // myHashTable._hash('1232')
-myHashTable.set('grapes', 10000)
+myHashTable.set('grapess', 10000)
+myHashTable.set('apples', 35)
+myHashTable.set('oranges', 2)
+myHashTable.set('pears', 2)
+myHashTable.get('pears')
