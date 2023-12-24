@@ -44,11 +44,15 @@ class HashTable {
 
   keys() {
     const keysArray = []
-    for (let i = 0; i < this.data.length; i++) {
-      if (this.data[i]) {
-        keysArray.push(this.data[i][0][0])
+    let keyValue
+ 
+    for (let d of this.data) {
+      if (d) {
+        keyValue = d[0][0]
+        keysArray.push(keyValue)
       }
     }
+    
     console.log(keysArray)
     return keysArray
   }
