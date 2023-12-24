@@ -33,8 +33,10 @@ class HashTable {
       // }
       
       for (let c of currentBucket) {
-        console.log(c[1])
-        return c[1]
+        if (c[0]) {
+          console.log(c[1])
+          return c[1]
+        }
       }
     }
     return undefined
