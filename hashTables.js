@@ -43,6 +43,10 @@ class HashTable {
     return undefined
   }
 
+  delete(key) {
+    
+  }
+
   keys() { // O(n)
     const keysArray = []
     let keyValue
