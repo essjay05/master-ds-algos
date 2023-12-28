@@ -37,6 +37,8 @@ const findFirstRecurringChar = (array) => {
 }
 
 // Alternative (inefficient) solution: O(n)^2
+// *NOTE: this solution gives a different solution (depending)
+  // on the order of characters within the array (ie example: array2) 
 const findFirstRecurringChar2 = (arr) => {
   // Loop through array and check current index value
   // against remaining values in array
@@ -48,7 +50,7 @@ const findFirstRecurringChar2 = (arr) => {
     // Inner Loop comparing i index value to j index values
     // starts at 1 since i starts at 0
     
-    for (let j = 1; j <= arr.length; j++) {
+    for (let j = i+1; j <= arr.length; j++) {
       // compare arr[i] to arr[j] values
       console.log(`arr[i]: ${arr[i]}`)
       console.log(`arr[j]: ${arr[j]}`)
@@ -69,4 +71,4 @@ const findFirstRecurringChar2 = (arr) => {
 // findFirstRecurringChar(array2)
 
 // Test cases for second solution:
-findFirstRecurringChar2(array1)
+findFirstRecurringChar2(array2)
