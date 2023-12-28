@@ -12,6 +12,7 @@
   const array3 = [2,3,4,5]
   // Should return undefined
 
+// Efficient solution: O(n) time complexity
 const findFirstRecurringChar = (array) => {
   // Create hash to hold counts of characters
   const hash = {}
