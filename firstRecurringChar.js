@@ -36,5 +36,10 @@ const findFirstRecurringChar = (array) => {
   return undefined
 }
 
+// Alternative (inefficient) solution: O(n)^2
+const findFirstRecurringChar2 = (arr) => {
+  
+}
+
 // findFirstRecurringChar(array1)
 findFirstRecurringChar(array2)
