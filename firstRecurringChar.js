@@ -52,8 +52,6 @@ const findFirstRecurringChar2 = (arr) => {
     
     for (let j = i+1; j <= arr.length; j++) {
       // compare arr[i] to arr[j] values
-      console.log(`arr[i]: ${arr[i]}`)
-      console.log(`arr[j]: ${arr[j]}`)
       if (arr[i] === arr[j]) {
         console.log(`Found first recurring char: ${arr[i]}`)
         firstRecurringValue = arr[i]
@@ -67,8 +65,12 @@ const findFirstRecurringChar2 = (arr) => {
   
 }
 
-// findFirstRecurringChar(array1)
-// findFirstRecurringChar(array2)
+// Test cases for first solution:
+findFirstRecurringChar(array1)
+findFirstRecurringChar(array2)
+findFirstRecurringChar(array3)
 
 // Test cases for second solution:
+findFirstRecurringChar2(array1)
 findFirstRecurringChar2(array2)
+findFirstRecurringChar2(array3)
