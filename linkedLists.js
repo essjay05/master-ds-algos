@@ -1,6 +1,10 @@
-class MySinglyLinkedList {
-  constructor() {
-
+class SinglyLinkedList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      next: null
+    }
+    this.tail = this.head
   }
 
   // Methods to create from scratch:
@@ -8,7 +12,7 @@ class MySinglyLinkedList {
   search() {
 
   }
-  
+
   // Add to beginning
   prepend() {
 
@@ -31,3 +35,5 @@ class MySinglyLinkedList {
 
 
 }
+
+const mySinglyLL = new SinglyLinkedList(10)
