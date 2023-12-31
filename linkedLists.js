@@ -5,6 +5,7 @@ class SinglyLinkedList {
       next: null
     }
     this.tail = this.head
+    this.length = 1
   }
 
   // Methods to create from scratch:
@@ -37,3 +38,4 @@ class SinglyLinkedList {
 }
 
 const mySinglyLL = new SinglyLinkedList(10)
+console.log(mySinglyLL)
