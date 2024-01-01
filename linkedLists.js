@@ -20,8 +20,16 @@ class SinglyLinkedList {
   }
 
   // Add to end
-  append() {
-
+  append(value) {
+    const newNode = {
+      value: value,
+      next: null
+    }
+    this.tail.next = newNode
+    this.tail = newNode
+    this.length++
+    console.log(this)
+    return this
   }
 
   // Insert in middle somewhere
@@ -38,4 +46,5 @@ class SinglyLinkedList {
 }
 
 const mySinglyLL = new SinglyLinkedList(10)
-console.log(mySinglyLL)
+mySinglyLL.append(5)
+// console.log(mySinglyLL)
