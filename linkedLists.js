@@ -1,3 +1,10 @@
+// class Node {
+//   constructor(value) {
+//     value: value,
+//     next: null
+//   }
+// }
+
 class SinglyLinkedList {
   constructor(value) {
     this.head = {
@@ -15,8 +22,16 @@ class SinglyLinkedList {
   }
 
   // Add to beginning
-  prepend() {
-
+  prepend(value) {
+    const newNode = {
+      value: value,
+      next: null
+    }
+    newNode.next = this.head
+    this.head = newNode
+    this.length++
+    console.log(this)
+    return this
   }
 
   // Add to end
@@ -47,4 +62,6 @@ class SinglyLinkedList {
 
 const mySinglyLL = new SinglyLinkedList(10)
 mySinglyLL.append(5)
+mySinglyLL.append(16)
+mySinglyLL.prepend(1)
 // console.log(mySinglyLL)
