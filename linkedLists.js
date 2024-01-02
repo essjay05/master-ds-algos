@@ -21,7 +21,7 @@ class SinglyLinkedList {
 
   }
 
-  // Add to beginning
+  // Add to beginning: Time Complexity O(1)
   prepend(value) {
     const newNode = new Node()
     newNode.next = this.head
@@ -31,7 +31,7 @@ class SinglyLinkedList {
     return this
   }
 
-  // Add to end
+  // Add to end: Time Complexity O(1)
   append(value) {
     const newNode = new Node()
     this.tail.next = newNode
