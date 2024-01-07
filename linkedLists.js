@@ -42,7 +42,20 @@ class SinglyLinkedList {
   }
 
   // Insert in middle somewhere
-  insert() {
+  insert(index, value) {
+    let pointerIndex = 0
+    let pointer = this.head
+    let previousNode = index - 1
+    let nextNode
+    
+    const newNode = new Node(value)
+    for (let i = 0; i <= index; i++) {
+      if (pointerIndex === index) {
+        nextNode = pointer.next
+        pointer = newNode
+      }
+    }
+    if (this.head.value )
 
   }
 
@@ -58,4 +71,5 @@ const mySinglyLL = new SinglyLinkedList(10)
 mySinglyLL.append(5)
 mySinglyLL.append(16)
 mySinglyLL.prepend(1)
+mySinglyLL.insert(2, 99)
 // console.log(mySinglyLL)
