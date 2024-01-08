@@ -43,14 +43,20 @@ class SinglyLinkedList {
 
   // Insert in middle somewhere
   insert(index, value) {
+    if (index === 0) {
+      this.prepend(value)
+      console.log(this)
+      return this
+    }
     let pointerIndex = 0
     let pointer = this.head
-    let previousNode = index - 1
+    let previousNodeIndex = index - 1
     let nextNode
     
     const newNode = new Node(value)
     for (let i = 0; i <= index; i++) {
-      if (pointerIndex === index) {
+      if (pointerIndex === previousNodeIndex) {
+        
         nextNode = pointer.next
         pointer = newNode
       }
