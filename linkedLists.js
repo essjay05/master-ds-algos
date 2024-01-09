@@ -15,13 +15,13 @@ class SinglyLinkedList {
     this.length = 1
   }
 
-  // Methods to create from scratch:
-  // Look up
-  search() {
-
+  // Print List of linkedList values
+  printList() {
+    
   }
 
-  // Traverse to Index
+  // Methods to create from scratch:
+  // Look up / Traverse to Index
   traverseToIndex(index) {
     /* TODO: error handling check valid index value */
     // Set currentNode value
@@ -111,7 +111,7 @@ class SinglyLinkedList {
   }
 
   // Delete
-  delete() {
+  remove(index) {
 
   }
 
