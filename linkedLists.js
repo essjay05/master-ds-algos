@@ -34,6 +34,8 @@ class SinglyLinkedList {
 
     for (pointerIndex; pointerIndex <= index; pointerIndex++) {
       if (pointerIndex === index) {
+        console.log(`TraverseToIndex(${index}) currentNode:`)
+        console.log(currentNode)
         return currentNode
       }
       currentNode = currentNode.next
@@ -46,6 +48,7 @@ class SinglyLinkedList {
     newNode.next = this.head
     this.head = newNode
     this.length++
+    console.log(`Prepend(${value}):`)
     console.log(this)
     return this
   }
@@ -56,6 +59,7 @@ class SinglyLinkedList {
     this.tail.next = newNode
     this.tail = newNode
     this.length++
+    console.log(`Append(${value}):`)
     console.log(this)
     return this
   }
@@ -103,5 +107,9 @@ const mySinglyLL = new SinglyLinkedList(10)
 mySinglyLL.append(5)
 mySinglyLL.append(16)
 mySinglyLL.prepend(1)
-mySinglyLL.insert(2, 99)
+mySinglyLL.traverseToIndex(0)
+mySinglyLL.traverseToIndex(10)
+mySinglyLL.traverseToIndex(2)
+
+// mySinglyLL.insert(2, 99)
 // console.log(mySinglyLL)
