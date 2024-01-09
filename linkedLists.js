@@ -23,14 +23,20 @@ class SinglyLinkedList {
 
   // Traverse to Index
   traverseToIndex(index) {
+    // Set currentNode value
     let currentNode = this.head
+    // Set pointerIndex value to start
     let pointerIndex = 0
 
-    for (let pointerIndex; pointerIndex <= index; pointerIndex++) {
+    // Edge cases:
+    if (index === pointerIndex) return this.head
+    if (index >= this.length) return this.tail
+
+    for (pointerIndex; pointerIndex <= index; pointerIndex++) {
       if (pointerIndex === index) {
         return currentNode
       }
-      
+      currentNode = currentNode.next
     }
   }
 
