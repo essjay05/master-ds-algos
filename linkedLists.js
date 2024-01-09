@@ -79,19 +79,20 @@ class SinglyLinkedList {
 
     const newNode = new Node(value)
 
-    // let currentNodeIndex = 0
-    // let currentNode = this.head
-    // let previousNodeIndex = index - 1
-    // let nextNode
-    
-    // for (let i = 0; i <= index; i++) {
-    //   if (currentNodeIndex === previousNodeIndex) {
-        
-    //     nextNode = currentNode.next
-    //     currentNode = newNode
-    //   }
-    // }
-    // if (this.head.value )
+    const pointer = this.traverseToIndex(index)
+    const previousNode = this.traverseToIndex(index-1)
+    console.log('Insert at pointer')
+    console.log(pointer)
+    newNode.next = pointer
+    previousNode.next = newNode
+    this.length++
+
+    console.log(`inserted ${value} at index: ${index}`)
+    console.log(this)
+    console.log(`newNode:`)
+    console.log(newNode)
+
+    return this
 
   }
 
@@ -111,5 +112,5 @@ mySinglyLL.traverseToIndex(0)
 mySinglyLL.traverseToIndex(10)
 mySinglyLL.traverseToIndex(2)
 
-// mySinglyLL.insert(2, 99)
+mySinglyLL.insert(2, 99)
 // console.log(mySinglyLL)
