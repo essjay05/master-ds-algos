@@ -17,7 +17,17 @@ class SinglyLinkedList {
 
   // Print List of linkedList values
   printList() {
-    
+    const linkedListValues = []
+    let pointer = 0
+    let currentNode = this.head
+    while (pointer < this.length) {
+      linkedListValues.push(currentNode.value)
+      currentNode = currentNode.next
+      pointer++
+    }
+    console.log('Printed array of SinglyLinkedList values:')
+    console.log(linkedListValues)
+    return linkedListValues
   }
 
   // Methods to create from scratch:
@@ -127,4 +137,5 @@ mySinglyLL.traverseToIndex(10)
 mySinglyLL.traverseToIndex(2)
 
 mySinglyLL.insert(0, 99)
+mySinglyLL.printList()
 // console.log(mySinglyLL)
