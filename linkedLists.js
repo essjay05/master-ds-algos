@@ -79,18 +79,24 @@ class SinglyLinkedList {
       return this.append(value)
     }
 
+    // Create new node to be inserted
     const newNode = new Node(value)
-
     
+    // Grab previousNode to where node is being inserted
+    // to change its next value to our newNode
     const previousNode = this.traverseToIndex(index-1)
+    // Grab value of node being pushed forward to provide 
+    // as newNode's next value
     const pointer = previousNode.next
-    console.log('Pointer value (being pushed forward is:')
-    console.log(pointer)
 
     console.log('Insert at pointer')
     console.log(pointer)
+    // Update our newNode's next value to the pointerNode
+    // at the given index
     newNode.next = pointer
+    // Update the previous node's next value to our newNode
     previousNode.next = newNode
+    // Increment length of SinglyLinkedList
     this.length++
 
     console.log(`inserted ${value} at index: ${index}`)
