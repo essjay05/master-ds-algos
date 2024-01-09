@@ -43,25 +43,32 @@ class SinglyLinkedList {
 
   // Insert in middle somewhere
   insert(index, value) {
+    // if index = 0, insert new node at head
     if (index === 0) {
       this.prepend(value)
       console.log(this)
       return this
     }
-    let pointerIndex = 0
-    let pointer = this.head
-    let previousNodeIndex = index - 1
-    let nextNode
-    
-    const newNode = new Node(value)
-    for (let i = 0; i <= index; i++) {
-      if (pointerIndex === previousNodeIndex) {
-        
-        nextNode = pointer.next
-        pointer = newNode
-      }
+    // if index >= this.length, insert new node at tail
+    if (index >= this.length) {
+      return this.append(value)
     }
-    if (this.head.value )
+
+    const newNode = new Node(value)
+
+    // let currentNodeIndex = 0
+    // let currentNode = this.head
+    // let previousNodeIndex = index - 1
+    // let nextNode
+    
+    // for (let i = 0; i <= index; i++) {
+    //   if (currentNodeIndex === previousNodeIndex) {
+        
+    //     nextNode = currentNode.next
+    //     currentNode = newNode
+    //   }
+    // }
+    // if (this.head.value )
 
   }
 
