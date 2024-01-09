@@ -23,7 +23,15 @@ class SinglyLinkedList {
 
   // Traverse to Index
   traverseToIndex(index) {
-    
+    let currentNode = this.head
+    let pointerIndex = 0
+
+    for (let pointerIndex; pointerIndex <= index; pointerIndex++) {
+      if (pointerIndex === index) {
+        return currentNode
+      }
+      
+    }
   }
 
   // Add to beginning: Time Complexity O(1)
