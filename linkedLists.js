@@ -118,5 +118,5 @@ mySinglyLL.traverseToIndex(0)
 mySinglyLL.traverseToIndex(10)
 mySinglyLL.traverseToIndex(2)
 
-mySinglyLL.insert(1, 99)
+mySinglyLL.insert(200, 99)
 // console.log(mySinglyLL)
