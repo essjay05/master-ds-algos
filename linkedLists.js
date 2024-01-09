@@ -33,14 +33,15 @@ class SinglyLinkedList {
     if (index === pointerIndex) return this.head
     if (index >= this.length) return this.tail
 
-    for (pointerIndex; pointerIndex <= index; pointerIndex++) {
-      if (pointerIndex === index) {
-        console.log(`TraverseToIndex(${index}) currentNode:`)
-        console.log(currentNode)
-        return currentNode
-      }
+    while (pointerIndex !== index) {
       currentNode = currentNode.next
+      pointerIndex++
     }
+    
+    console.log(`TraverseToIndex(${index}) currentNode:`)
+    console.log(currentNode)
+    return currentNode
+      
   }
 
   // Add to beginning: Time Complexity O(1)
@@ -125,5 +126,5 @@ mySinglyLL.traverseToIndex(0)
 mySinglyLL.traverseToIndex(10)
 mySinglyLL.traverseToIndex(2)
 
-mySinglyLL.insert(200, 99)
+mySinglyLL.insert(0, 99)
 // console.log(mySinglyLL)
