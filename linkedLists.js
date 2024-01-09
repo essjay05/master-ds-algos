@@ -21,6 +21,11 @@ class SinglyLinkedList {
 
   }
 
+  // Traverse to Index
+  traverseToIndex(index) {
+    
+  }
+
   // Add to beginning: Time Complexity O(1)
   prepend(value) {
     const newNode = new Node(value)
