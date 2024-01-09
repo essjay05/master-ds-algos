@@ -79,8 +79,12 @@ class SinglyLinkedList {
 
     const newNode = new Node(value)
 
-    const pointer = this.traverseToIndex(index)
+    
     const previousNode = this.traverseToIndex(index-1)
+    const pointer = previousNode.next
+    console.log('Pointer value (being pushed forward is:')
+    console.log(pointer)
+
     console.log('Insert at pointer')
     console.log(pointer)
     newNode.next = pointer
@@ -112,5 +116,5 @@ mySinglyLL.traverseToIndex(0)
 mySinglyLL.traverseToIndex(10)
 mySinglyLL.traverseToIndex(2)
 
-mySinglyLL.insert(2, 99)
+mySinglyLL.insert(1, 99)
 // console.log(mySinglyLL)
