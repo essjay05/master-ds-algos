@@ -68,12 +68,14 @@ class SinglyLinkedList {
   insert(index, value) {
     // if index = 0, insert new node at head
     if (index === 0) {
-      this.prepend(value)
+      console.log('prepended value')
       console.log(this)
-      return this
+      return this.prepend(value)
     }
     // if index >= this.length, insert new node at tail
     if (index >= this.length) {
+      console.log('appended value')
+      console.log(this)
       return this.append(value)
     }
 
