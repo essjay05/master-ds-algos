@@ -23,6 +23,7 @@ class SinglyLinkedList {
 
   // Traverse to Index
   traverseToIndex(index) {
+    /* TODO: error handling check valid index value */
     // Set currentNode value
     let currentNode = this.head
     // Set pointerIndex value to start
