@@ -129,18 +129,23 @@ class SinglyLinkedList {
       console.log(this)
       return this
     }
-    // if (index === 0) {
-    //   // Change head to 
-    // }
+    if (index === 0) {
+      // Change head to head.next
+      this.head = this.head.next
+      this.length--
+      console.log(`removed node at index 0 ${index}`)
+      console.log(this)
+      return this
+    }
   }
 
 
 }
 
 const mySinglyLL = new SinglyLinkedList(10)
-// mySinglyLL.append(5)
+mySinglyLL.append(5)
 // mySinglyLL.append(16)
-// mySinglyLL.prepend(1)
+mySinglyLL.prepend(1)
 // mySinglyLL.traverseToIndex(0)
 // mySinglyLL.traverseToIndex(10)
 // mySinglyLL.traverseToIndex(2)
