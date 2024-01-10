@@ -122,20 +122,31 @@ class SinglyLinkedList {
 
   // Delete
   remove(index) {
-
+    if (this.length === 1) {
+      this.head.value = null
+      this.length--
+      console.log(`removed node at index ${index}`)
+      console.log(this)
+      return this
+    }
+    // if (index === 0) {
+    //   // Change head to 
+    // }
   }
 
 
 }
 
 const mySinglyLL = new SinglyLinkedList(10)
-mySinglyLL.append(5)
-mySinglyLL.append(16)
-mySinglyLL.prepend(1)
-mySinglyLL.traverseToIndex(0)
-mySinglyLL.traverseToIndex(10)
-mySinglyLL.traverseToIndex(2)
+// mySinglyLL.append(5)
+// mySinglyLL.append(16)
+// mySinglyLL.prepend(1)
+// mySinglyLL.traverseToIndex(0)
+// mySinglyLL.traverseToIndex(10)
+// mySinglyLL.traverseToIndex(2)
 
-mySinglyLL.insert(0, 99)
+// mySinglyLL.insert(0, 99)
+mySinglyLL.printList()
+mySinglyLL.remove(0)
 mySinglyLL.printList()
 // console.log(mySinglyLL)
