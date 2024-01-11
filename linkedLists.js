@@ -165,7 +165,7 @@ mySinglyLL.prepend(1)
 
 // mySinglyLL.insert(0, 99)
 mySinglyLL.printList()
-mySinglyLL.remove(20)
+mySinglyLL.remove(3)
 mySinglyLL.printList()
 
 // console.log(mySinglyLL)
