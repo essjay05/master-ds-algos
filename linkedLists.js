@@ -149,6 +149,13 @@ class SinglyLinkedList {
       console.log(this)
       return this
     }
+    previousNode = this.traverseToIndex(index-1)
+    let nextNode = this.traverseToIndex(index).next
+    previousNode.next = nextNode
+    this.length--
+    console.log(`removed node at index: ${index}`)
+    console.log(this)
+    return this
 
   }
 
@@ -165,7 +172,7 @@ mySinglyLL.prepend(1)
 
 // mySinglyLL.insert(0, 99)
 mySinglyLL.printList()
-mySinglyLL.remove(3)
+mySinglyLL.remove(1)
 mySinglyLL.printList()
 
 // console.log(mySinglyLL)
