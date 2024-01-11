@@ -129,6 +129,7 @@ class SinglyLinkedList {
       console.log(this)
       return this
     }
+    // Remove first index
     if (index === 0) {
       // Change head to head.next
       this.head = this.head.next
@@ -137,6 +138,18 @@ class SinglyLinkedList {
       console.log(this)
       return this
     }
+    let previousNode
+    // Remove last index
+    if (index >= this.length) {
+      previousNode = this.traverseToIndex(this.length-2)
+      previousNode.next = null
+      this.tail = previousNode
+      this.length--
+      console.log(`removed node at index end ${index}`)
+      console.log(this)
+      return this
+    }
+
   }
 
 
@@ -152,6 +165,7 @@ mySinglyLL.prepend(1)
 
 // mySinglyLL.insert(0, 99)
 mySinglyLL.printList()
-mySinglyLL.remove(0)
+mySinglyLL.remove(20)
 mySinglyLL.printList()
+
 // console.log(mySinglyLL)
