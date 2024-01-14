@@ -178,6 +178,8 @@ class SinglyLinkedList {
 // console.log(mySinglyLL)
 
 // Doubly Linked List
+// Benefit of being able to traverse list
+// backwards or forwards
 class DoublyLinkedList {
   constructor(value) {
     this.head = {
@@ -211,6 +213,6 @@ class DoublyLinkedList {
 
   // Remove value at index: O(n)
   remove(index) {
-    
+
   }
 }
