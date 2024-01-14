@@ -180,6 +180,9 @@ class SinglyLinkedList {
 // Doubly Linked List
 // Benefit of being able to traverse list
 // backwards or forwards
+// Con: takes up a little more memory because
+// you have to hold memory for nodes' previous
+// to the node as well as next
 class DoublyLinkedList {
   constructor(value) {
     this.head = {
