@@ -162,17 +162,30 @@ class SinglyLinkedList {
 
 }
 
-const mySinglyLL = new SinglyLinkedList(10)
-mySinglyLL.append(5)
+// const mySinglyLL = new SinglyLinkedList(10)
+// mySinglyLL.append(5)
 // mySinglyLL.append(16)
-mySinglyLL.prepend(1)
+// mySinglyLL.prepend(1)
 // mySinglyLL.traverseToIndex(0)
 // mySinglyLL.traverseToIndex(10)
 // mySinglyLL.traverseToIndex(2)
 
 // mySinglyLL.insert(0, 99)
-mySinglyLL.printList()
-mySinglyLL.remove(1)
-mySinglyLL.printList()
+// mySinglyLL.printList()
+// mySinglyLL.remove(1)
+// mySinglyLL.printList()
 
 // console.log(mySinglyLL)
+
+// Doubly Linked List
+class DoublyLinkedList {
+  constructor(value) {
+    this.head = {
+      value: value,
+      prev: null,
+      next: null
+    }
+    this.tail = this.head
+    this.length = 1
+  }
+}
