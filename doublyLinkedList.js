@@ -1,7 +1,7 @@
 class Node {
   constructor(value) {
     this.value = value,
-    this.prev = null
+    this.prev = null,
     this.next = null
   }
 }
@@ -30,7 +30,16 @@ class DoublyLinkedList {
 
   // Add to end of DLL: O(1)
   append(value) {
-
+    const newNode = new Node(value)
+    newNode.prev = this.tail
+    this.tail.next = newNode
+    this.tail = newNode
+    this.length++
+    console.log(`Appended new value.`)
+    console.log(`New appended node:`)
+    console.log(newNode)
+    console.log(this)
+    return this
   }
 
   // Lookup value: O(n)
@@ -48,3 +57,19 @@ class DoublyLinkedList {
 
   }
 }
+
+const myDoublyLL = new DoublyLinkedList(10)
+myDoublyLL.append(5)
+myDoublyLL.append(16)
+// myDoublyLL.append(16)
+// myDoublyLL.prepend(1)
+// myDoublyLL.traverseToIndex(0)
+// myDoublyLL.traverseToIndex(10)
+// myDoublyLL.traverseToIndex(2)
+
+// myDoublyLL.insert(0, 99)
+// myDoublyLL.printList()
+// myDoublyLL.remove(1)
+// myDoublyLL.printList()
+
+// console.log(myDoublyLL)
