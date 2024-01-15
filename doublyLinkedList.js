@@ -1,3 +1,11 @@
+class Node {
+  constructor(value) {
+    this.value = value,
+    this.prev = null
+    this.next = null
+  }
+}
+
 // Doubly Linked List
 // Benefit of being able to traverse list
 // backwards or forwards
