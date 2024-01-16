@@ -66,8 +66,44 @@ class DoublyLinkedList {
 
   // Lookup value: O(n)
   lookup(index) {
-
+    // Determine whether to check from front of LL or end of LL
+    let nodeLocation = this.length - index
+    let pointer
+    let pointerIndex
+    if (nodeLocation >= this.length / 2) {
+      // traverse from end
+      pointer = this.tail
+      pointerIndex = this.length-1
+      while (pointerIndex !== index) {
+        pointer = pointer.prev
+        pointerIndex--
+      }
+      console.log(`Node at ${index} is:`)
+      console.log(pointer)
+      return pointer
+    } else {
+      // traverse from front
+      pointer = this.head
+      pointerIndex = 0
+      while (pointerIndex !== index) {
+        pointer = pointer.next
+        pointerIndex++
+      }
+      console.log(`Node at ${index} is:`)
+      console.log(pointer)
+      return pointer
+    }
   }
+
+  // Traverse from end
+  // traverseFromEnd(index) {
+  //   let pointer = this.tail
+
+  //   while
+  // }
+
+  // Traverse from front
+
 
   // Insert value at index: O(n)
   insert(index, value) {
@@ -84,6 +120,7 @@ const myDoublyLL = new DoublyLinkedList(10)
 myDoublyLL.append(5)
 myDoublyLL.append(16)
 myDoublyLL.prepend(1)
+myDoublyLL.lookup(0)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
