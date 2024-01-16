@@ -70,6 +70,11 @@ class DoublyLinkedList {
     let nodeLocation = this.length - index
     let pointer
     let pointerIndex
+    if (index >= this.length || index < 0) {
+      console.log(`Index: ${index}`)
+      console.log(`Node doesn't exist`)
+      return
+    }
     if (nodeLocation >= this.length / 2) {
       // traverse from end
       pointer = this.tail
@@ -120,7 +125,7 @@ const myDoublyLL = new DoublyLinkedList(10)
 myDoublyLL.append(5)
 myDoublyLL.append(16)
 myDoublyLL.prepend(1)
-myDoublyLL.lookup(0)
+myDoublyLL.lookup(10)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
