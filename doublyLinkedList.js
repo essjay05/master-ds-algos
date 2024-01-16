@@ -75,6 +75,19 @@ class DoublyLinkedList {
       console.log(`Node doesn't exist`)
       return
     }
+    // Time complexity O(1)
+    if (index === 0) {
+      pointer = this.head
+      console.log(`Index is 0: return head`)
+      console.log(pointer)
+      return pointer
+    }
+    if (index === this.length - 1) {
+      pointer = this.tail
+      console.log(`Index is ${index}: return tail`)
+      console.log(pointer)
+      return pointer
+    }
     if (nodeLocation >= this.length / 2) {
       // traverse from end
       pointer = this.tail
@@ -100,14 +113,10 @@ class DoublyLinkedList {
     }
   }
 
-  // Traverse from end
-  // traverseFromEnd(index) {
-  //   let pointer = this.tail
+  // Traverse to Index
+  traverseToNode(index) {
 
-  //   while
-  // }
-
-  // Traverse from front
+  }
 
 
   // Insert value at index: O(n)
@@ -125,7 +134,7 @@ const myDoublyLL = new DoublyLinkedList(10)
 myDoublyLL.append(5)
 myDoublyLL.append(16)
 myDoublyLL.prepend(1)
-myDoublyLL.lookup(10)
+myDoublyLL.lookup(3)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
