@@ -133,6 +133,8 @@ class DoublyLinkedList {
 
     // Update nextNode's previous (newNode)
 
+    // Increment length by one
+
     // Return doublyLinkedList
   }
 
