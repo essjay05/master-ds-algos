@@ -121,7 +121,19 @@ class DoublyLinkedList {
 
   // Insert value at index: O(n)
   insert(index, value) {
+    // Lookup index value previous to provided index
 
+    // Create previousNode
+
+    // Create nextNode
+
+    // Create holdingNode
+    
+    // Update previousNode's next (newNode)
+
+    // Update nextNode's previous (newNode)
+
+    // Return doublyLinkedList
   }
 
   // Remove value at index: O(n)
