@@ -122,20 +122,27 @@ class DoublyLinkedList {
   // Insert value at index: O(n)
   insert(index, value) {
     // Lookup index value previous to provided index
-
+    let prevNode = this.lookup(index - 1)
     // Create previousNode
-
+    let holdingNode = prevNode.next
     // Create nextNode
-
+    const newNode = new Node(value)
     // Create holdingNode
     
     // Update previousNode's next (newNode)
-
+    prevNode.next = newNode
     // Update nextNode's previous (newNode)
+    holdingNode.prev = newNode
 
+    newNode.prev = prevNode
+    newNode.next = holdingNode
     // Increment length by one
-
+    this.length++
     // Return doublyLinkedList
+    console.log(`Inserted node:`)
+    console.log(newNode)
+    console.log(this)
+    return this
   }
 
   // Remove value at index: O(n)
@@ -149,6 +156,7 @@ myDoublyLL.append(5)
 myDoublyLL.append(16)
 myDoublyLL.prepend(1)
 myDoublyLL.lookup(3)
+myDoublyLL.insert(2, 2)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
