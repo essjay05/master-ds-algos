@@ -147,7 +147,16 @@ class DoublyLinkedList {
 
   // Remove value at index: O(n)
   remove(index) {
-
+    // Check if index is at beginning 0 or end this.length+1
+    if (index === 0) {
+      this.head = this.head.next
+      this.head.prev = null
+      this.length--
+      console.log(`Removed head`)
+      console.log(this.head)
+      console.log(this)
+      return this
+    }
   }
 }
 
@@ -157,6 +166,8 @@ myDoublyLL.append(16)
 myDoublyLL.prepend(1)
 myDoublyLL.lookup(3)
 myDoublyLL.insert(2, 2)
+myDoublyLL.printList()
+myDoublyLL.remove(0)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
