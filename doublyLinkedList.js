@@ -147,6 +147,10 @@ class DoublyLinkedList {
 
   // Remove value at index: O(n)
   remove(index) {
+    if (index < 0 || index > this.length-1) {
+      console.log(`Index not found in DLL`)
+      return
+    }
     // Check if index is at beginning 0 or end this.length+1
     if (index === 0) {
       this.head = this.head.next
@@ -178,7 +182,7 @@ myDoublyLL.prepend(1)
 myDoublyLL.lookup(3)
 myDoublyLL.insert(2, 2)
 myDoublyLL.printList()
-myDoublyLL.remove(4)
+myDoublyLL.remove(-5)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
