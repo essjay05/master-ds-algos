@@ -172,6 +172,16 @@ class DoublyLinkedList {
       console.log(this.tail)
       console.log(this)
     }
+    let removingNode = this.lookup(index)
+    let prevNode = this.lookup(index-1)
+    let nextNode = prevNode.next.next
+    prevNode.next = nextNode
+    nextNode.prev = prevNode
+    this.length--
+    console.log(`Removing node:`)
+    console.log(removingNode)
+    console.log(this)
+    return this
   }
 }
 
@@ -182,7 +192,7 @@ myDoublyLL.prepend(1)
 myDoublyLL.lookup(3)
 myDoublyLL.insert(2, 2)
 myDoublyLL.printList()
-myDoublyLL.remove(-5)
+myDoublyLL.remove(2)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
