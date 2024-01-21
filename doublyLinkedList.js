@@ -157,6 +157,17 @@ class DoublyLinkedList {
       console.log(this)
       return this
     }
+    // Check if index is at end of DLL
+    if (index === this.length -1) {
+      console.log(`Tail before removal`)
+      console.log(this.tail)
+      this.tail = this.tail.prev
+      this.tail.next = null
+      this.length--
+      console.log(`Tail after removal`)
+      console.log(this.tail)
+      console.log(this)
+    }
   }
 }
 
@@ -167,7 +178,7 @@ myDoublyLL.prepend(1)
 myDoublyLL.lookup(3)
 myDoublyLL.insert(2, 2)
 myDoublyLL.printList()
-myDoublyLL.remove(0)
+myDoublyLL.remove(4)
 // myDoublyLL.traverseToIndex(0)
 // myDoublyLL.traverseToIndex(10)
 // myDoublyLL.traverseToIndex(2)
