@@ -183,6 +183,10 @@ class DoublyLinkedList {
     console.log(this)
     return this
   }
+
+  reverse() {
+
+  }
 }
 
 const myDoublyLL = new DoublyLinkedList(10)
@@ -193,13 +197,5 @@ myDoublyLL.lookup(3)
 myDoublyLL.insert(2, 2)
 myDoublyLL.printList()
 myDoublyLL.remove(2)
-// myDoublyLL.traverseToIndex(0)
-// myDoublyLL.traverseToIndex(10)
-// myDoublyLL.traverseToIndex(2)
 
-// myDoublyLL.insert(0, 99)
 myDoublyLL.printList()
-// myDoublyLL.remove(1)
-// myDoublyLL.printList()
-
-// console.log(myDoublyLL)
