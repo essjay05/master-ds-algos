@@ -159,6 +159,11 @@ class SinglyLinkedList {
 
   }
 
+  reverse() {
+    if (this.length === 1) {
+      return this
+    }
+  }
 
 }
 
