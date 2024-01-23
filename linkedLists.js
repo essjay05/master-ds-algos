@@ -160,6 +160,7 @@ class SinglyLinkedList {
   }
 
   reverse() {
+    // if length of 1 just return the LL
     if (this.length === 1) {
       return this
     }
