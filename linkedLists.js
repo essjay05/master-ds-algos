@@ -164,22 +164,38 @@ class SinglyLinkedList {
     if (this.length === 1) {
       return this
     }
+    let first = this.head;
+    this.tail = this.head;
+    let second = first.next;
+    while (second) {
+      const temp = second.next
+      second.next = first;
+      first = second;
+      second = temp;
+    }
+    this.head.next = null
+    this.head = first
+    console.log(`Reversed this LL:`)
+    console.log(this)
+    return this
   }
 
 }
 
-// const mySinglyLL = new SinglyLinkedList(10)
-// mySinglyLL.append(5)
-// mySinglyLL.append(16)
-// mySinglyLL.prepend(1)
+const mySinglyLL = new SinglyLinkedList(10)
+mySinglyLL.append(5)
+mySinglyLL.append(16)
+mySinglyLL.prepend(1)
 // mySinglyLL.traverseToIndex(0)
 // mySinglyLL.traverseToIndex(10)
 // mySinglyLL.traverseToIndex(2)
 
-// mySinglyLL.insert(0, 99)
-// mySinglyLL.printList()
-// mySinglyLL.remove(1)
-// mySinglyLL.printList()
+mySinglyLL.insert(0, 99)
+mySinglyLL.printList()
+mySinglyLL.remove(1)
+mySinglyLL.printList()
+mySinglyLL.reverse()
 
-// console.log(mySinglyLL)
+mySinglyLL.printList()
+console.log(mySinglyLL)
 
