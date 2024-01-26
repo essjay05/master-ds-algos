@@ -18,20 +18,32 @@ class Stack {
 
   }
 
-  // O(1)
+  // O(1) (Add to top)
   push(value) {
+    const newNode = new Node(value)
+    // Edge case if stack is empty
+    if (!this.top || !this.bottom || this.length === 0 ) {
+      this.top = newNode
+      this.bottom = newNode
+      this.length++
+      console.log(`Added first to stack`)
+      console.log(newNode)
+      console.log(this)
+      return this
+    }
+  }
+
+  // O(1) (Remove from top)
+  pop() {
 
   }
 
-  // O(1)
-  pop(value) {
-
-  }
-
-  // O(1)
+  // O(1) (See what's on top)
   peek() {
 
   }
+
 }
 
-const myStack = new Stack(10)
+const myStack = new Stack()
+myStack.push(5)
