@@ -43,7 +43,18 @@ class Stack {
 
   }
 
+  isEmpty() {
+    if (!this.top || !this.bottom || this.length === 0) {
+      console.log(`This stack is empty`)
+      console.log(this)
+      return this
+    }
+    console.log(`This stack is NOT empty.`)
+    console.log(this)
+    return this
+  }
 }
 
 const myStack = new Stack()
 myStack.push(5)
+myStack.isEmpty()
