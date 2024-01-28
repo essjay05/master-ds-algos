@@ -69,7 +69,9 @@ class Stack {
 
   // O(1) (See what's on top)
   peek() {
-
+    console.log('Peeking at the top :')
+    console.log(this.top)
+    return this.top
   }
 
   isEmpty() {
@@ -88,5 +90,6 @@ const myStack = new Stack()
 myStack.push(5)
 myStack.push(2)
 myStack.isEmpty()
+myStack.peek()
 myStack.pop()
 
