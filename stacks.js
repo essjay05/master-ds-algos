@@ -31,10 +31,39 @@ class Stack {
       console.log(this)
       return this
     }
+      newNode.next = this.top
+      this.top = newNode
+      this.length++
+      console.log(`Pushed new value: ${value}`)
+      console.log(newNode)
+      console.log(this)
+      return this
   }
 
   // O(1) (Remove from top)
   pop() {
+    if (this.length === 0 || this.isEmpty()) {
+      console.log(`This stack is empty`)
+      return
+    }
+    if (!this.top.next) {
+      this.top = null;
+      this.bottom = null;
+      this.length--
+      console.log('Decreased 1 to 0 stack')
+      console.log(this)
+      return this
+    }
+    if (this.top.next) {
+      const newTop = this.top.next
+      let removingNode = this.top
+      removingNode = null
+      this.top = newTop
+      this.length--
+      console.log(`Removed the top.`)
+      console.log(this)
+      return this
+    }
 
   }
 
@@ -57,4 +86,7 @@ class Stack {
 
 const myStack = new Stack()
 myStack.push(5)
+myStack.push(2)
 myStack.isEmpty()
+myStack.pop()
+
