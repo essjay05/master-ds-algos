@@ -89,6 +89,8 @@ class Stack {
 const myStack = new Stack()
 myStack.push(5)
 myStack.push(2)
+myStack.push(3)
+myStack.push(10)
 myStack.isEmpty()
 myStack.peek()
 myStack.pop()
