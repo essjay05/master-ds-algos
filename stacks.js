@@ -25,14 +25,11 @@ class Stack {
     if (this.isEmpty()) {
       this.top = newNode
       this.bottom = newNode
-      this.length++
       console.log(`Added first to stack`)
-      console.log(newNode)
-      console.log(this)
-      return this
-    }
+    } else {
       newNode.next = this.top
       this.top = newNode
+    }
       this.length++
       console.log(`Pushed new value: ${value}`)
       console.log(newNode)
