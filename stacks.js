@@ -4,7 +4,7 @@ class Node {
     this.next = null
   }
 }
-
+/*
 // LIFO
 class Stack {
   constructor() {
@@ -83,12 +83,40 @@ class Stack {
   }
 }
 
+*/
+
+// Stacks using array
+class Stack {
+  constructor() {
+    this.array = []
+  }
+
+  peek() {
+    console.log(`Peek this.array:`)
+    console.log(this.array)
+    console.log(`this.array[0]: ${this.array[0]}`)
+    return this.array[0]
+  }
+
+  push(value) {
+  }
+
+  pop() {
+  }
+
+  isEmpty() {
+    console.log(this.array.length === 0)
+    return this.array.length === 0
+  }
+
+}
+
+// 
 const myStack = new Stack()
-myStack.push(5)
-myStack.push(2)
-myStack.push(3)
-myStack.push(10)
 myStack.isEmpty()
 myStack.peek()
-myStack.pop()
+// myStack.push(10)
+// myStack.isEmpty()
+// myStack.peek()
+// myStack.pop()
 
