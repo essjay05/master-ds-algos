@@ -94,8 +94,8 @@ class Stack {
   peek() {
     console.log(`Peek this.array:`)
     console.log(this.array)
-    console.log(`this.array[0]: ${this.array[0]}`)
-    return this.array[0]
+    console.log(`this.array[this.array.length-1]: ${this.array[this.array.length-1]}`)
+    return this.array[this.array.length-1]
   }
 
   push(value) {
@@ -106,7 +106,7 @@ class Stack {
   }
 
   pop() {
-    const removedVal = this.array.shift()
+    const removedVal = this.array.pop()
     console.log(`Removed value: ${removedVal}`)
     console.log(this.array)
   }
