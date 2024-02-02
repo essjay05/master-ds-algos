@@ -99,13 +99,20 @@ class Stack {
   }
 
   push(value) {
+    this.array.push(value)
+    console.log(`Push ${value} into this.array:`)
+    console.log(this.array)
+    return this.array
   }
 
   pop() {
+    const removedVal = this.array.shift()
+    console.log(`Removed value: ${removedVal}`)
+    console.log(this.array)
   }
 
   isEmpty() {
-    console.log(this.array.length === 0)
+    console.log(`this.array.length === 0 : ${this.array.length === 0}`)
     return this.array.length === 0
   }
 
@@ -115,8 +122,13 @@ class Stack {
 const myStack = new Stack()
 myStack.isEmpty()
 myStack.peek()
-// myStack.push(10)
-// myStack.isEmpty()
-// myStack.peek()
-// myStack.pop()
+myStack.push(10)
+myStack.push(2)
+myStack.push('test string')
+myStack.pop()
+myStack.pop()
+myStack.isEmpty()
+myStack.peek()
+myStack.pop()
+myStack.isEmpty()
 
