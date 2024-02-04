@@ -36,8 +36,14 @@ class Queue {
   }
 
   // O(1)
-  dequeue(value) {
-
+  dequeue() {
+    if (this.isEmpty()) {
+      console.log(`Queue is empty`)
+      return this
+    } else {
+      console.log(`Need to dequeue the first node`)
+      return this
+    }
   }
 
   // O(1)
@@ -52,4 +58,5 @@ const myQueue = new Queue()
 myQueue.enqueue(10)
 myQueue.enqueue(2)
 myQueue.enqueue(20)
+myQueue.dequeue()
 myQueue.isEmpty()
