@@ -37,13 +37,27 @@ class Queue {
 
   // O(1)
   dequeue() {
+    let removingNode =  this.first
     if (this.isEmpty()) {
       console.log(`Queue is empty`)
       return this
+    } else if (this.length === 1){
+      this.first = null;
+      this.last = null;
+      this.length--
+      console.log(`Dequeued queue of length 1`)
+      console.log(this)
+      return this
     } else {
-      console.log(`Need to dequeue the first node`)
+      console.log(`Dequeuing the removingNode:`)
+      console.log(removingNode)
+      this.first = this.first.next
+      this.length--
+      removingNode = null
+      console.log(this)
       return this
     }
+    
   }
 
   // O(1)
