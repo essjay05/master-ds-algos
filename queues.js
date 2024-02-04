@@ -30,9 +30,11 @@ class Queue {
 
   // O(1)
   isEmpty() {
-
+    console.log(this.length === 0)
+    return this.length === 0;
   }
 
 }
 
 const myQueue = new Queue(10)
+myQueue.isEmpty()
