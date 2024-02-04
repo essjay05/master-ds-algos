@@ -21,7 +21,7 @@ class Queue {
   // O(1)
   enqueue(value) {
     const newNode = new Node(value)
-    if (this.length === 0) {
+    if (this.isEmpty()) {
       this.first = newNode
     } else if (this.length === 1) {
       this.first.next = newNode
