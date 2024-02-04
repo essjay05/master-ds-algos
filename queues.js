@@ -7,9 +7,14 @@ class Node {
 
 // FIFO
 class Queue {
+  constructor() {
+    this.first = null;
+    this.last = null;
+    this.length = 0;
+  }
 
   // O(n)
-  lookup(value) {
+  peek(value) {
 
   }
 
@@ -24,7 +29,7 @@ class Queue {
   }
 
   // O(1)
-  peek() {
+  isEmpty() {
 
   }
 
