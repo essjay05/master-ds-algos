@@ -14,8 +14,10 @@ class Queue {
   }
 
   // O(n)
-  peek(value) {
-
+  peek() {
+    console.log(`Peeking at the first node`)
+    console.log(this.first)
+    return this.first
   }
 
   // O(1)
@@ -72,5 +74,13 @@ const myQueue = new Queue()
 myQueue.enqueue(10)
 myQueue.enqueue(2)
 myQueue.enqueue(20)
+myQueue.peek()
 myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
 myQueue.isEmpty()
