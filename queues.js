@@ -20,7 +20,19 @@ class Queue {
 
   // O(1)
   enqueue(value) {
-
+    const newNode = new Node(value)
+    if (this.length === 0) {
+      this.first = newNode
+    } else if (this.length === 1) {
+      this.first.next = newNode
+    } else {
+      this.last.next = newNode
+    }
+    this.last = newNode
+    this.length++
+    console.log(`Enqueued newNode value: ${newNode}`)
+    console.log(this)
+    return this
   }
 
   // O(1)
@@ -36,5 +48,8 @@ class Queue {
 
 }
 
-const myQueue = new Queue(10)
+const myQueue = new Queue()
+myQueue.enqueue(10)
+myQueue.enqueue(2)
+myQueue.enqueue(20)
 myQueue.isEmpty()
