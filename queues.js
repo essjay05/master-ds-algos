@@ -79,22 +79,28 @@ class Queue {
     this.array = []
   }
 
-  // Peek
+  // Peek O(1)
   peek() {
-    console.log(`Peeking at the first item: ${this.array[this.array.length - 1]}`)
-    return this.array[this.array.length - 1]
+    console.log(`Peeking at the first item: ${this.array[0]}`)
+    return this.array[0]
   }
 
-  // Enqueue
+  // Enqueue O(n)
   enqueue(value) {
-
+    this.array.push(value)
+    console.log(`Enqueuing value ${value} into this.array:`)
+    console.log(this.array)
+    return this
   }
 
-  // Dequeue
+  // Dequeue O(n)
   dequeue() {
-
+    console.log(`Dequeueing value ${this.array[0]}`)
+    this.array.shift()
+    console.log(this.array)
+    return this
   }
-  // isEmpty
+  // isEmpty O(1)
   isEmpty() {
     console.log(this.array.length === 0)
     return this.array.length === 0
@@ -102,16 +108,16 @@ class Queue {
 }
 
 const myQueue = new Queue()
-// myQueue.enqueue(10)
-// myQueue.enqueue(2)
-// myQueue.enqueue(20)
+myQueue.enqueue(10)
+myQueue.enqueue(2)
+myQueue.enqueue(20)
 myQueue.peek()
-// myQueue.dequeue()
-// myQueue.peek()
-// myQueue.dequeue()
-// myQueue.peek()
-// myQueue.dequeue()
-// myQueue.peek()
-// myQueue.dequeue()
-// myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
+myQueue.dequeue()
+myQueue.peek()
 myQueue.isEmpty()
