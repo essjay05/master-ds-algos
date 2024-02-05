@@ -5,6 +5,7 @@ class Node {
   }
 }
 
+/*
 // FIFO
 class Queue {
   constructor() {
@@ -42,7 +43,7 @@ class Queue {
     let removingNode =  this.first
     if (this.isEmpty()) {
       console.log(`Queue is empty`)
-      return this
+      return null
     } else if (this.length === 1){
       this.first = null;
       this.last = null;
@@ -70,17 +71,46 @@ class Queue {
 
 }
 
+*/
+
+// Queues using array
+class Queue {
+  constructor() {
+    this.array = []
+  }
+
+  // Peek
+  peek() {
+
+  }
+
+  // Enqueue
+  enqueue(value) {
+
+  }
+
+  // Dequeue
+  dequeue() {
+
+  }
+  // isEmpty
+  isEmpty() {
+    console.log(this.array.length === 0)
+    return this.array.length === 0
+  }
+}
+
 const myQueue = new Queue()
-myQueue.enqueue(10)
-myQueue.enqueue(2)
-myQueue.enqueue(20)
-myQueue.peek()
-myQueue.dequeue()
-myQueue.peek()
-myQueue.dequeue()
-myQueue.peek()
-myQueue.dequeue()
-myQueue.peek()
-myQueue.dequeue()
-myQueue.peek()
+// myQueue.enqueue(10)
+// myQueue.enqueue(2)
+// myQueue.enqueue(20)
+// myQueue.peek()
+// myQueue.dequeue()
+// myQueue.peek()
+// myQueue.dequeue()
+// myQueue.peek()
+// myQueue.dequeue()
+// myQueue.peek()
+// myQueue.dequeue()
+// myQueue.peek()
 myQueue.isEmpty()
