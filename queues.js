@@ -81,7 +81,8 @@ class Queue {
 
   // Peek
   peek() {
-
+    console.log(`Peeking at the first item: ${this.array[this.array.length - 1]}`)
+    return this.array[this.array.length - 1]
   }
 
   // Enqueue
@@ -104,7 +105,7 @@ const myQueue = new Queue()
 // myQueue.enqueue(10)
 // myQueue.enqueue(2)
 // myQueue.enqueue(20)
-// myQueue.peek()
+myQueue.peek()
 // myQueue.dequeue()
 // myQueue.peek()
 // myQueue.dequeue()
