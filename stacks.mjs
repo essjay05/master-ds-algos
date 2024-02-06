@@ -86,7 +86,7 @@ class Stack {
 */
 
 // Stacks using array
-class Stack {
+export default class Stack {
   constructor() {
     this.array = []
   }
@@ -115,7 +115,6 @@ class Stack {
     console.log(`this.array.length === 0 : ${this.array.length === 0}`)
     return this.array.length === 0
   }
-
 }
 
 // 
@@ -131,4 +130,3 @@ myStack.isEmpty()
 myStack.peek()
 myStack.pop()
 myStack.isEmpty()
-
