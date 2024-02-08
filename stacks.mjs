@@ -86,7 +86,7 @@ class Stack {
 */
 
 // Stacks using array
-export default class Stack {
+export class Stack {
   constructor() {
     this.array = []
   }
