@@ -17,6 +17,7 @@ class QueueStack {
   }
 
   enqueue(value) {
+    this.stack.push(value)
     console.log(`Enqueued value: ${value}`)
     console.log(this)
     return this
@@ -37,4 +38,8 @@ class QueueStack {
 
 const myQueueStack = new QueueStack()
 myQueueStack.enqueue('Joy')
+myQueueStack.enqueue('Kat')
+myQueueStack.enqueue('Max')
+myQueueStack.enqueue('Glenn')
+myQueueStack.enqueue('Biggie')
 console.log(myQueueStack)
