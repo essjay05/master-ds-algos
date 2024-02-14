@@ -7,6 +7,7 @@ class Node {
   }
 }
 
+// FIFO
 class QueueStack {
   constructor() {
     this.stack = new Stack()
@@ -17,15 +18,18 @@ class QueueStack {
   }
 
   enqueue(value) {
-    this.stack.push(value)
+    this.stack.unshift(value)
     console.log(`Enqueued value: ${value}`)
     console.log(this)
     return this
   }
 
-  // dequeue() {
+  dequeue() {
+    const removedValue = this.stack.pop()
+    console.log(`Removed value: ${removedValue}`)
+    console.log(this)
 
-  // }
+  }
 
   // peek() {
 
@@ -42,4 +46,5 @@ myQueueStack.enqueue('Kat')
 myQueueStack.enqueue('Max')
 myQueueStack.enqueue('Glenn')
 myQueueStack.enqueue('Biggie')
+myQueueStack.dequeue()
 console.log(myQueueStack)
