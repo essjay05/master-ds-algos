@@ -28,12 +28,12 @@ class QueueStack {
     const removedValue = this.stack.pop()
     console.log(`Removed value: ${removedValue}`)
     console.log(this)
-
+    return this
   }
 
-  // peek() {
+  peek() {
 
-  // }
+  }
 
   // isEmpty() {
 
