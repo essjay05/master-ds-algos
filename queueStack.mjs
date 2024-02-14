@@ -9,29 +9,32 @@ class Node {
 
 class QueueStack {
   constructor() {
-    const newQueueStack = new Stack()
+    this.stack = new Stack()
     console.log(`NewQueueStack:`)
-    console.log(newQueueStack)
-    return newQueueStack
+    console.log(this.stack)
+    console.log('This is:')
+    console.log(this)
   }
 
-  enqueue() {
-
+  enqueue(value) {
+    console.log(`Enqueued value: ${value}`)
+    console.log(this)
+    return this
   }
 
-  dequeue() {
+  // dequeue() {
 
-  }
+  // }
 
-  peek() {
+  // peek() {
 
-  }
+  // }
 
-  isEmpty() {
+  // isEmpty() {
 
-  }
+  // }
 }
 
 const myQueueStack = new QueueStack()
-
+myQueueStack.enqueue('Joy')
 console.log(myQueueStack)
